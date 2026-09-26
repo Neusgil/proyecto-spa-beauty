@@ -1,0 +1,99 @@
+@use "../abstracts/variables" as *;
+
+// ========================================
+// HERO - BOTONES Y ACCIONES
+// ========================================
+
+.hero {
+  // ----------------------------------------
+  // CONTENEDOR DE ACCIONES
+  // ----------------------------------------
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    width: 452px;
+    height: 60px;
+    margin-top: 56px;
+  }
+
+  // ----------------------------------------
+  // BOOK NOW
+  // ----------------------------------------
+
+  &__book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 60px;
+    border-radius: 32px;
+
+    background-color: $color-dark-blue;
+    color: $color-white;
+
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: $font-regular;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: $color-cyan;
+      color: $color-dark-blue;
+    }
+  }
+
+  // ----------------------------------------
+  // WATCH VIDEO
+  // ----------------------------------------
+
+  &__video {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    width: 240px;
+    height: 60px;
+
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: $font-regular;
+    color: $color-dark-blue;
+
+    cursor: pointer;
+  }
+
+  // ----------------------------------------
+  // ICONO PLAY
+  // ----------------------------------------
+
+  &__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 48px;
+      height: 48px;
+
+      transition: transform 0.2s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.25);
+    }
+  }
+}

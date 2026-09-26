@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as *;
+
+// ========================================
+// HERO - ESTADÍSTICAS
+// ========================================
+
+.hero {
+  // ----------------------------------------
+  // CONTENEDOR DE ESTADÍSTICAS
+  // ----------------------------------------
+
+  &__stats {
+    position: absolute;
+    top: 678px;
+    left: 160px;
+    z-index: 4;
+
+    display: flex;
+    gap: 32px;
+
+    width: 643px;
+    height: 284px;
+    padding: 32px 72px;
+
+    background-color: rgba($color-white, 0.8);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+  }
+
+  // ----------------------------------------
+  // ESTADÍSTICA INDIVIDUAL
+  // ----------------------------------------
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    width: 145px;
+    height: 220px;
+
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.05);
+  }
+
+  // ----------------------------------------
+  // ICONO
+  // ----------------------------------------
+
+  &__stat-icon {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 72px;
+      height: 72px;
+
+      transition: transform 0.25s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.25);
+    }
+  }
+
+  // ----------------------------------------
+  // TEXTOS
+  // ----------------------------------------
+
+  &__stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    width: 145px;
+    height: 124px;
+
+    // Número
+    strong {
+      display: block;
+
+      font-family: $font-primary;
+      font-size: 36px;
+      font-weight: $font-medium;
+      line-height: 100%;
+
+      color: $color-dark-blue;
+      text-align: center;
+    }
+
+    // Descripción
+    span {
+      display: block;
+      width: 145px;
+
+      font-family: $font-primary;
+      font-size: 18px;
+      font-weight: $font-regular;
+      line-height: 100%;
+
+      color: $color-gray;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+// ========================================
+// HEADER
+// ========================================
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 1920px;
+  height: 120px;
+  padding: 0 160px;
+
+  @include m.flex-center(space-between);
+
+  font-family: v.$font-primary;
+
+  // ----------------------------------------
+  // Logo
+  // ----------------------------------------
+
+  &__logo {
+    width: 212px;
+
+    a {
+      font-size: 36px;
+      font-weight: v.$font-semibold;
+      line-height: 1;
+      color: v.$color-dark-blue;
+
+      span {
+        color: v.$color-cyan;
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // Navegación
+  // ----------------------------------------
+
+  &__nav {
+    @include m.flex-center;
+    gap: 56px;
+
+    a {
+      font-size: 18px;
+      font-weight: v.$font-regular;
+      line-height: 1;
+      color: v.$color-dark-blue;
+
+      transition: color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        color: v.$color-cyan;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // Iconos
+  // ----------------------------------------
+
+  &__icons {
+    @include m.flex-center;
+    gap: 32px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+
+    @include m.flex-center;
+
+    img {
+      width: 32px;
+      height: 32px;
+
+      transition: transform 0.2s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.25);
+    }
+  }
+
+  // ----------------------------------------
+  // Acceso de usuario
+  // ----------------------------------------
+
+  &__buttons {
+    @include m.flex-center;
+    gap: 32px;
+  }
+
+  // Sign In
+  &__signin {
+    font-family: v.$font-secondary;
+    font-size: 18px;
+    font-weight: v.$font-regular;
+    line-height: 40px;
+    color: v.$color-dark-blue;
+    text-decoration: underline;
+
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+
+  // Sign Up
+  &__signup {
+    width: 149px;
+    height: 60px;
+    border-radius: 32px;
+
+    @include m.flex-center;
+
+    font-family: v.$font-primary;
+    font-size: 18px;
+    font-weight: v.$font-regular;
+    line-height: 1;
+    color: v.$color-white;
+    background-color: v.$color-dark-blue;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: v.$color-cyan;
+      color: v.$color-dark-blue;
+    }
+  }
+}
