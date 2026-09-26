@@ -10,9 +10,7 @@ This project is part of my front-end development practice, using **HTML, Sass, J
 
 ## Live Demo
 
-The project is deployed with **GitHub Pages**.
-
-> Live demo link will be added after deployment.
+[View the live project](https://neusgil.github.io/proyecto-spa-beauty/)
 
 ## Technologies
 
